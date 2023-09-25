@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    // Define a versão do ECMAScript (ES) para a qual o código TypeScript será compilado
+    "target": "es2016",
+    /*
+    A especificação ECMAScript é mantida pela organização Ecma International, que é uma associação de 
+    padronização de tecnologia. A especificação é atualizada periodicamente para adicionar novos recursos, 
+    melhorar a linguagem e corrigir problemas. Cada nova versão do ECMAScript traz um conjunto de recursos 
+    e melhorias que os desenvolvedores podem usar ao escrever código JavaScript.
+    */
+
+    // Define o sistema de módulos a ser usado durante a compilação
+    "module": "commonjs",
+    /*
+    CommonJS é um sistema de módulos para JavaScript que foi desenvolvido para ser usado em ambientes de 
+    servidor, especialmente no ecossistema Node.js. Estrutura:
+          - módulos - arquivo com um conjunto de funcionalidades relacionadas
+          - require/export - importação/exportação de módulos
+          - carregamento sincrono - ao carregar um módulo dentro de outro, o módulo mais interno sera carregado
+                                    e avaliado primeiro antesde terminar o carregando do módulo mais externo
+          - escopo - as variáveis e funções definidas em um módulo não são visíveis para outros módulos, a menos 
+                     que sejam explicitamente exportadas.
+    */
+
+    // Especifica o diretório raiz onde o compilador TypeScript procurará pelos arquivos a serem compilados
+    "rootDir": "src",
+
+    // Define o diretório de saída onde os arquivos JavaScript compilados serão colocados
+    "outDir": "./dist",
+
+    // Define como o compilador TypeScript deve resolver os módulos.
+    "moduleResolution": "node",
+
+    // Obriga o compilador a fazer distinção entre letras maiúsculas e minúsculas nos nomes de arquivo
+    "forceConsistentCasingInFileNames": true,
+
+    // Habilita um conjunto de opções de compilação estritas que ajudam a pegar erros potenciais de programação mais cedo.
+    "strict": true,
+
+    // Pula a verificação de tipos em arquivos de biblioteca, o que pode acelerar a compilação
+    "skipLibCheck": true
+  }
+}

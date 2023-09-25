@@ -1,0 +1,24 @@
+{
+  "name": "setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marialauras/setup-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marialauras/setup-node/issues"
+  },
+  "homepage": "https://github.com/marialauras/setup-node#readme",
+  "devDependencies": {
+    "@types/node": "^20.6.5",
+    "typescript": "^5.2.2"
+  }
+}
