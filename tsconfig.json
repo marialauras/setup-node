@@ -23,7 +23,7 @@
     */
 
     // Especifica o diretório raiz onde o compilador TypeScript procurará pelos arquivos a serem compilados
-    "rootDir": "src",
+    "rootDir": "./src",
 
     // Define o diretório de saída onde os arquivos JavaScript compilados serão colocados
     "outDir": "./dist",
