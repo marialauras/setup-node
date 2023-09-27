@@ -1,7 +1,13 @@
-class Person {
-    sayMyName() {
-        return "Maria"
-    }
-}
+import * as express from "express"
+import Person from "@/person"
+import { Request, Response } from "express"
 
-export default Person
+const app = express()
+
+const person = new Person()
+
+app.get("/", (req: Request, res: Response) => {
+    res.send(person.sayHello())
+})
+
+app.listen(3000, () => console.log("listen on port 3000"))

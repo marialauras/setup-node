@@ -6,7 +6,7 @@
     "scripts": {
         "build": "tsc",
         "start": "node dist/index.js",
-        "start:dev": "nodemon --watch 'src/' --exec 'ts-node -r tsconfig-paths/register /index.ts' -e ts",
+        "start:dev": "nodemon --watch 'src/' --exec 'ts-node -r tsconfig-paths/register src/index.ts' -e ts",
         "husky:prepare": "husky install",
         "eslint": "eslint --fix 'src/**'",
         "test": "jest --passWithNoTests",
@@ -26,6 +26,7 @@
     },
     "homepage": "https://github.com/marialauras/setup-node#readme",
     "devDependencies": {
+        "@types/express": "^4.17.18",
         "@types/jest": "^29.5.5",
         "@types/node": "^20.6.5",
         "@typescript-eslint/eslint-plugin": "^6.7.2",
@@ -33,6 +34,7 @@
         "add": "^2.0.6",
         "eslint": "^8.50.0",
         "eslint-config-prettier": "^9.0.0",
+        "git-commit-msg-linter": "^5.0.4",
         "husky": "^8.0.3",
         "jest": "^29.7.0",
         "lint-staged": "^14.0.1",
@@ -43,5 +45,8 @@
         "tsc-alias": "^1.8.8",
         "tsconfig-paths": "^4.2.0",
         "typescript": "^5.2.2"
+    },
+    "dependencies": {
+        "express": "^4.18.2"
     }
 }
