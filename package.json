@@ -1,31 +1,41 @@
 {
-  "name": "setup",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start:dev": "nodemon --watch 'src/' --exec 'ts-node src/index.ts' -e ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/marialauras/setup-node.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/marialauras/setup-node/issues"
-  },
-  "homepage": "https://github.com/marialauras/setup-node#readme",
-  "devDependencies": {
-    "@types/node": "^20.6.5",
-    "@typescript-eslint/eslint-plugin": "^6.7.2",
-    "@typescript-eslint/parser": "^6.7.2",
-    "eslint": "^8.50.0",
-    "eslint-config-prettier": "^9.0.0",
-    "nodemon": "^3.0.1",
-    "prettier": "^3.0.3",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.2.2"
-  }
+    "name": "setup",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start:dev": "nodemon --watch 'src/' --exec 'ts-node src/index.ts' -e ts",
+        "husky:prepare": "husky install",
+        "eslint": "eslint --fix 'src/**'"
+    },
+    "lint-staged": {
+        "*.ts": [
+            "eslint 'src/**' --fix",
+            "prettier --check 'src/**'"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/marialauras/setup-node.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/marialauras/setup-node/issues"
+    },
+    "homepage": "https://github.com/marialauras/setup-node#readme",
+    "devDependencies": {
+        "@types/node": "^20.6.5",
+        "@typescript-eslint/eslint-plugin": "^6.7.2",
+        "@typescript-eslint/parser": "^6.7.2",
+        "eslint": "^8.50.0",
+        "eslint-config-prettier": "^9.0.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^14.0.1",
+        "nodemon": "^3.0.1",
+        "prettier": "^3.0.3",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.2.2"
+    }
 }
