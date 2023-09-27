@@ -1,3 +1,6 @@
-it("should sum", () => {
-    expect(8 + 8).toBe(16)
+import Person from "."
+
+it("should know my name", () => {
+    const person = new Person()
+    expect(person.sayMyName()).toBe("Maria")
 })
